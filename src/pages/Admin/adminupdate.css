@@ -1,0 +1,25 @@
+.update-div {
+    margin-top: -70px;
+}
+
+.main-heading {
+    border: none;
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+  }
+  
+  .main-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 3px;
+    background-color: #5900ff;
+  }
+  
+
+.update-btn{
+    margin-top: 15px;
+}

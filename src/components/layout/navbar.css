@@ -1,0 +1,97 @@
+/* Navbar Styling */
+header {
+    background-color: #222;
+    padding: 0px;
+    position: fixed;
+    margin-top: -100px;
+    width: 100%;
+    z-index: 999;
+}
+
+.logo-brand a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+    padding: 2px 0;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #535bf2;
+}
+
+nav ul li a.active {
+    color: #535bf2;
+    border-bottom: 2px solid #535bf2;
+    border-radius: 50px;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: #535bf2;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.close {
+    color: red;
+}
+
+.menu {
+    font-weight: bold;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 77px;
+        left: 0;
+        width: 100%;
+        background: #333;
+        padding: 20px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
